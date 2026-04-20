@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
+    no-repeat center center/cover;
+
+  transition: 0.3s;
+}
+
+/* صندوق تسجيل الدخول */
+.container {
+  width: 350px;
+  padding: 30px;
+  border-radius: 20px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+
+  color: white;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+  animation: fadeIn 0.8s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+
+  border-radius: 10px;
+  border: none;
+
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #00c6ff;
+}
+
+/* button */
+button {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #00c6ff;
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0072ff;
+  transform: scale(1.05);
+}
+
+/* message */
+#msg {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* links */
+a {
+  display: block;
+  margin-top: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* responsive */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+}
